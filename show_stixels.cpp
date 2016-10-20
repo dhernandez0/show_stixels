@@ -203,15 +203,15 @@ bool directory_exists(const char* dir) {
 }
 
 int main(int argc, char *argv[]) {
-    if(argc < 4) {
-        std::cerr << "Usage: show_stixels dir max_disparity max_disparity_display" << std::endl;
+    if(argc < 3) {
+        std::cerr << "Usage: show_stixels dir max_disparity" << std::endl;
 		return -1;
 	}
 	const int column_size = 5;
 	const int width_margin = 0;
 	const char* directory = argv[1];
 	const int max_dis = atoi(argv[2]);
-	const float max_dis_display = (float) atoi(argv[3]);
+	const float max_dis_display = (float) 30;
 	const char* left_dir = "left";
 	const char* disparity_dir = "disparities";
 	const char* stixels_dir = "stixels";
@@ -278,6 +278,7 @@ int main(int argc, char *argv[]) {
 		for(size_t i = 0; i < stixels.size(); i++) {
 			std::vector<Section> column = stixels.at(i);
 			Section prev;
+			prev.type = -1;
 			bool have_prev = false;
 			for(size_t j = 0; j < column.size(); j++) {
 				Section sec = column.at(j);

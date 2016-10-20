@@ -28,4 +28,4 @@ install(
 
 target_link_libraries( show_stixels ${OpenCV_LIBS} )
 
-set(CMAKE_CXX_FLAGS "-std=c++0x -Wall -Wextra -Winline -Werror -pedantic -pedantic-errors -march=native -O3 -ffast-math")
+set(CMAKE_CXX_FLAGS "-std=c++0x -Wall -Wextra -Winline -Werror -pedantic -march=native -O3 -ffast-math")
