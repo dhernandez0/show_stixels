@@ -268,6 +268,10 @@ int main(int argc, char *argv[]) {
 		}
 
 		cv::Mat frame = cv::imread(left_file);
+		if(!frame.data) {
+			std::cerr << "Couldn't read the file " << left_file << std::endl;
+			return EXIT_FAILURE;
+		}
 
 		std::vector< std::vector<Section> > stixels = ReadStixels(stixel_file);
 		int horizon_row = -1;
