@@ -12,6 +12,18 @@ cd build
 cmake ..
 make
 ```
+## Important Parameters
+
+In order to make this code work for your images you should set the following parameters.
+
+Command line parameter:
+- Disparity: Maximum disparity of the disparity map, this depends on the stereo-pair cameras
+
+Other parameters (main.cu):
+- Focal: Depends on the cameras you are using (in pixels)
+- Baseline: Depends on the cameras you are using (in meters)
+- Camera Center Y: Depends on the cameras you are using (in pixels)
+- Column Step: This should be the same used for generating the stixels (in pixels)
 
 ## How to use it
 
