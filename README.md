@@ -19,7 +19,7 @@ In order to make this code work for your images you should set the following par
 Command line parameter:
 - Disparity: Maximum disparity of the disparity map, this depends on the stereo-pair cameras
 
-Other parameters (main.cu):
+Other parameters (show_stixels.cpp):
 - Focal: Depends on the cameras you are using (in pixels)
 - Baseline: Depends on the cameras you are using (in meters)
 - Camera Center Y: Depends on the cameras you are using (in pixels)
